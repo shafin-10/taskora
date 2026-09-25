@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "a project management tool",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "a",
+    "backend",
+    "api"
+  ],
+  "author": "shafin shahriar",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.9.9"
+  }
+}
