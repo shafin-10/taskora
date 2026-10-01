@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [
     "a",
@@ -16,6 +16,18 @@
   "author": "shafin shahriar",
   "license": "ISC",
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "prettier": "3.9.9"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mailgen": "^2.0.36",
+    "mailtrap": "^4.10.0",
+    "mongoose": "^9.10.2",
+    "nodemailer": "^9.1.1"
   }
 }
