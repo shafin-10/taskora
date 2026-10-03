@@ -2,8 +2,11 @@ import express from "express"
 import cors from "cors";
 import healthCheckRouter from "./routes/healthCheck.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import cookieParser from "cookie-parser";
+
 
 const app = express();
+app.use(cookieParser())
 
 //basic configuration
 app.use(express.json());

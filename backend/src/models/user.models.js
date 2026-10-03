@@ -70,15 +70,15 @@ userScheme.pre("save", async function () {
 });
 
 userScheme.methods.isPasswordCorrect = async function (password) {
-  return bcrypt.compare(this.password, password);
+  return bcrypt.compare(password, this.password);
 };
 
-userScheme.methods.generateAccressToken = function () {
+userScheme.methods.generateAccessToken = function () {
   return jwt.sign(
     {
       _id: this._id,
       email: this.email,
-      username: this.userScheme,
+      username: this.username,
     },
     process.env.ACCESS_TOKEN_SECRET,
     { expiresIn: process.env.ACCESS_TOKEN_EXPIRY },
@@ -91,7 +91,7 @@ userScheme.methods.generateRefreshToken = function () {
       _id: this._id,
     },
     process.env.REFRESH_TOKEN_SECRET,
-    { expiresIn: REFRESH_TOKEN_EXPIRY },
+    { expiresIn: process.env.REFRESH_TOKEN_EXPIRY },
   );
 };
 
