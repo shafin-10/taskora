@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 
 
 const app = express();
-app.use(cookieParser())
+app.use(cookieParser());
 
 //basic configuration
 app.use(express.json());
